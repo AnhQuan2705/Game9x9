@@ -18,25 +18,33 @@ public class Question9x9 : MonoBehaviour
         Debug.Log("question lock: " + _lock);
         if (!_lock)
         {
-            if (baitoan9x9.answerReceive != null)
+            if (baitoan9x9.answerReceive != null || baitoan9x9.answerReceiveClass1Chapter2 != null || baitoan9x9.answerReceiveClass2Chapter1 != null)
             {
                 //nhan answer
                 _lock = true;
                 answer = baitoan9x9.answerReceive;
+                answer = baitoan9x9.answerReceiveClass1Chapter2;
+                answer = baitoan9x9.answerReceiveClass2Chapter1;
+                answer = baitoan9x9.answerReceiveTongHop;
                 baitoan9x9.QuestionReceiveAnswer(this);
+                baitoan9x9.QuestionReceiveAnswerClass1Chapter2(this);
+                baitoan9x9.QuestionReceiveAnswerClass2Chapter1(this);
+                baitoan9x9.QuestionReceiveAnswerTongHop(this);
             }
             else
             {
                 Debug.Log("Chua bam cau tra loi");
             }
-
         }
         else
         {
             //cancel cau troi bat ky
-            if (!baitoan9x9.panelShowAnswer.activeSelf)
+            if (!baitoan9x9.panelShowAnswer.activeSelf || !baitoan9x9.panelShowAnswerClass1Chapter2.activeSelf || !baitoan9x9.panelShowAnswerClass2Chapter1.activeSelf || !baitoan9x9.panelShowAnswerTongHop.activeSelf)
             {
                 baitoan9x9.QuestionCancelAnswer(answer, this);
+                baitoan9x9.QuestionCancelAnswerClass1Chapter2(answer, this);
+                baitoan9x9.QuestionCancelAnswerClass2Chapter1(answer, this);
+                baitoan9x9.QuestionCancelAnswerTongHop(answer, this);
                 imgColor.gameObject.SetActive(false);
                 answer = null;
                 _lock = false;
@@ -51,6 +59,24 @@ public class Question9x9 : MonoBehaviour
     {
         //nhan answer, nhung cho hieu ung
         baitoan9x9.imgColorMoveTo.gameObject.SetActive(false);
-        baitoan9x9.CheckComplete();
+        imgColor.gameObject.SetActive(true);
+    }
+    public void ReceiveAnswerClass1Chapter2()
+    {
+        //nhan answer, nhung cho hieu ung
+        baitoan9x9.imgColorMoveTo.gameObject.SetActive(false);
+        imgColor.gameObject.SetActive(true);
+    }
+    public void ReceiveAnswerClass2Chapter1()
+    {
+        //nhan answer, nhung cho hieu ung
+        baitoan9x9.imgColorMoveTo.gameObject.SetActive(false);
+        imgColor.gameObject.SetActive(true);
+    }
+    public void ReceiveAnswerTongHop()
+    {
+        //nhan answer, nhung cho hieu ung
+        baitoan9x9.imgColorMoveTo.gameObject.SetActive(false);
+        imgColor.gameObject.SetActive(true);
     }
 }

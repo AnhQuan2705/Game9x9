@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 4138049712024962205}
   - component: {fileID: 4138049712024962206}
   - component: {fileID: 8131643733577325300}
+  - component: {fileID: 3295320876321629600}
   m_Layer: 0
   m_Name: AnswerButton
   m_TagString: Untagged
@@ -289,6 +290,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8131643733577325300}
+        m_TargetAssemblyTypeName: Answer9x9, Assembly-CSharp
+        m_MethodName: OnClickClass1Chpater2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8131643733577325300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +319,21 @@ MonoBehaviour:
   id: 0
   baitoan9x9: {fileID: 0}
   objLock: {fileID: 4138049712130645455}
+--- !u!114 &3295320876321629600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138049712024962192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &4138049712130645455
 GameObject:
   m_ObjectHideFlags: 0

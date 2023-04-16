@@ -33,6 +33,7 @@ public class Timer : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 baitoan99.EndGame();
+                baitoan99.EndGameChapter2();
             }
         }
     }
